@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JM_DNC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/43d74991db.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="initFunction()">
+    <div id="content">
+        <div id="menuBtn" onclick="closeFunction()">
+            <span class="slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <img src="./menu.png" alt="menu">
+                </a>
+            </span>
+        </div>
+
+        <div id="menu" class="nav">
+            <a href="#" id="close" onclick="closeSlideMenu()">
+                <img src="./cancel.png" alt="">
+            </a>
+            <ul>
+                <li id="index"><a href="index.html" id="index_a">시리얼 통신</a></li>
+                <li id="compare"><a href="compare.html" id="compare_a">코드 체크</a></li>
+                <li id="3d"><a href="3d.html" id="3d_a">3D 렌더링</a></li>
+                <li id="else"><a href="#" id="else_a">기타</a></li>
+                <li id="setting"><a href="setting.html" id="setting_a">설정</a></li>
+            </ul>
+        </div>
+        <div id="settingScreen">
+            <div id="settingPanel">
+                <div id="title">시리얼 세팅</div>
+                <div id="settingMenu1">
+                    <div id="portName">
+                        <span id="portNameTitle">Port Name</span>
+                        <span>
+                            <select name="portName" id="portNameid">
+                                <option value="/dev/ttyUSB0" selected>/dev/ttyUSB0</option>
+                                <option value="/dev/ttyUSB1">/dev/ttyUSB1</option>
+                                <option value="/dev/ttyUSB2">/dev/ttyUSB2</option>
+                                <option value="/dev/ttyUSB3">/dev/ttyUSB3</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div id="baudRate">
+                        <span id="BaudRateTitle">BaudRate</span>
+                        <span>
+                            <select name="baudRate" id="baudRateid">
+                                <option value="1200">1200</option>
+                                <option value="2400">2400</option>
+                                <option value="4800">4800</option>
+                                <option value="9600" selected>9600</option>
+                                <option value="19200">19200</option>
+                                <option value="38400">38400</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div id="settingMenu2">
+                    <div id="dataBitsName">
+                        <span id="dataBitsTitle">Data Bits</span>
+                        <span>
+                            <select name="dataBits" id="dataBitsid">
+                                <option value="8" selected>8</option>
+                                <option value="7">7</option>
+                                <option value="6">6</option>
+                                <option value="5">5</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div id="stopBitsName">
+                        <span id="stopBitsTitle">Stop Bits</span>
+                        <span>
+                            <select name="stopBits" id="stopBitsid">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div id="settingMenu3">
+                    <div id="parityName">
+                        <span id="parityTitle">Parity</span>
+                        <span>
+                            <select name="parity" id="parityid">
+                                <option value="none" selected>none</option>
+                                <option value="even">even</option>
+                                <option value="odd">odd</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div id="RTSCTSName">
+                        <span id="RTSCTSTitle">RTSCTS</span>
+                        <span>
+                            <select name="RTSCTS" id="RTSCTSid">
+                                <option value="true">ON</option>
+                                <option value="false" selected>OFF</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="exit">
+            <div id="exitName">
+                프로그램 종료
+            </div>
+            <div id="exitBtn">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+<script src="./renderer_setting.js"></script>
+
+</html>

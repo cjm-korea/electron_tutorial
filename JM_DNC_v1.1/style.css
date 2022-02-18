@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+}
+
+body #content {
+    height: 100%;
+    width: 100%;
+    transition: .7s;
+    display: flex;
+    flex-direction: row;
+    background-color: #EDEDED;
+}
+/* #region loading */
+#loading {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+}
+/* #region loading */
+
+/* #region Menu */
+body #content #menuBtn {
+    height: 100%;
+    width: 5%;
+    background-color: #384153;
+    display: flex;
+    justify-content: center;
+}
+body #content #menuBtn .slide{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+body #content #menuBtn .slide i{
+    color: white;
+    font-size: 36px;
+}
+
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #384153;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: .7s;
+    
+}
+.nav ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 40%;
+}
+.nav #close {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    right: 5px;
+    font-size: 32px;
+    color: white;
+}
+.nav li {
+    padding: 8% 15%;
+    display: block;
+}
+.nav li:hover {
+    border-left: 5px solid white;
+}
+.nav li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+/* #endregion Menu */
+
+/* #region 시리얼 통신 */
+
+/* #region SideBtn */
+#sideBtn {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #384153;
+    box-shadow: 5px 0px 5px 5px black;
+
+}
+#sideBtn ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+#sideBtn ul button {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+}
+#sideBtn ul button:hover {
+    box-shadow: 5px 5px 5px 5px black;
+}
+#sideBtn ul #sendBtn {
+    background-color: #1C2530;
+    color: white;
+    border-bottom: 1.5px solid #EDEDED;
+}
+#sideBtn ul #sendBtn i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+#sideBtn ul #portBtn {
+    background-color: #1C2530;
+    color: white;
+    border-bottom: 1.5px solid #EDEDED;
+}
+#sideBtn ul #portBtn i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+#sideBtn ul #fileOpen {
+    background-color: #1C2530;
+    color: white;
+    border-bottom: 1.5px solid #EDEDED;
+}
+#sideBtn ul #fileOpen i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+#sideBtn ul #fileSave {
+    background-color: #1C2530;
+    color: white;
+    
+}
+#sideBtn ul #fileSave i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+#sideBtn ul #delete {
+    background-color: #DD7070;
+    color: white;
+}
+#sideBtn ul #delete i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+/* #endregion SideBtn */
+
+/* #region MainPage */
+#mainPage {
+    height: 95%;
+    width: 65%;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+#mainPage #name {
+    margin: 10px 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#mainPage #mainScreen {
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #384153;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#mainPage #mainScreen #path {
+    height: 10%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4% 4%;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: white;
+    padding: 0;
+    background-color: #384153;
+    text-overflow: ellipsis;
+}
+#mainPage #mainScreen #textScreen {
+    height: 80%;
+    width: 94%;
+    margin: 1% 3%;
+    background-color: white;
+    border-radius: 10px;
+}
+#mainPage #mainScreen #textScreen textarea {
+    width: 97%;
+    height: 96%;
+    margin: 5px 5px;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-y: scroll;
+    resize: none;
+    border: none;
+}
+#mainPage #mainScreen #textScreen textarea:focus {
+    outline: none;
+}
+#mainPage #mainScreen #textScreen textarea::-webkit-scrollbar {
+    height: 100%;
+    width: 20px;
+}
+#mainPage #mainScreen #textScreen textarea::-webkit-scrollbar-thumb {
+    background-color: #2d3135;
+    border-radius: 12px;
+    min-height: 100px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+#mainPage #mainScreen #textScreen textarea::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+/* #endregion MainPage */
+
+/* #endregion 시리얼 통신 */
+
+/* #region 설정 */
+
+/* #region settingScreen */
+#settingScreen {
+    height: 100%;
+    width: 87%;
+}
+#settingScreen #settingPanel {
+    height: 86%;
+    width: 94%;
+    margin: 5% 5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+#settingScreen #settingPanel select {
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-size: 18px;
+}
+#settingScreen #settingPanel #title {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+#settingScreen #settingPanel #settingMenu1 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#settingScreen #settingPanel #portNameTitle, #BaudRateTitle {
+    height: 100%;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#settingScreen #settingPanel #portName, #baudRate {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#settingScreen #settingPanel #settingMenu2 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#settingScreen #settingPanel #dataBitsTitle, #stopBitsTitle {
+    height: 100%;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#settingScreen #settingPanel #dataBitsName, #stopBitsName {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#settingScreen #settingPanel #settingMenu3 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#settingScreen #settingPanel #parityTitle, #RTSCTSTitle {
+    height: 100%;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#settingScreen #settingPanel #parityName, #RTSCTSName {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #endregion settingScreen */
+
+/* #region exitBtn */
+#exit {
+    height: 100%;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+#exit #exitName {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+#exit #exitBtn {
+    display: flex;
+    justify-content: center;
+    margin: 25% 0;
+    font-size: 48px;
+}
+#exit #exitBtn i {
+    color: red;
+}
+/* #endregion exitBtn */
+
+/* #endregion 설정 */
+
+/* #region 코드체크 */
+/* #region MainPage */
+#compareMainpage {
+    margin: 3% 5%;
+    background-color: #384153;
+    width: 70%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#compareMainpage #title {
+    margin-top: 1.5%;
+}
+#compareMainpage #title #leftSearch {
+    color: white;
+    margin-left: 40%;
+    text-align: center;
+    font-size: 18px;
+}
+#compareMainpage #title #titleRight {
+    color: white;
+    margin-left: 20%;
+    font-size: 28px;
+}
+#compareMainpage #title #rightSearch {
+    color: white;
+    margin-left: 5%;
+    font-size: 18px;
+}
+#compareMainpage #compareTextArea {
+    width: 100%;
+    height: 75%;
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+#compareMainpage #compareTextArea #leftText {
+    width: 45%;
+    height: 95%;
+    border-radius: 10px;
+    resize: none;
+}
+#compareMainpage #compareTextArea #rightText {
+    height: 95%;
+    width: 45%;
+    margin-left: 2%;
+    border-radius: 10px;
+    resize: none;
+}
+#compareMainpage #result {
+    color: white;
+    margin-left: 5%;
+    font-size: 28px;
+}
+
+#compareTextArea textarea {
+    width: 97%;
+    height: 96%;
+    margin: 5px 5px;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-y: scroll;
+    resize: none;
+    border: none;
+}
+#compareTextArea #leftText:focus {
+    outline: none;
+}
+#compareTextArea #leftText::-webkit-scrollbar {
+    height: 100%;
+    width: 20px;
+}
+#compareTextArea #leftText::-webkit-scrollbar-thumb {
+    background-color: #2d3135;
+    border-radius: 12px;
+    min-height: 100px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+#compareTextArea #leftText::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+#compareTextArea #rightText:focus {
+    outline: none;
+}
+#compareTextArea #rightText::-webkit-scrollbar {
+    height: 100%;
+    width: 20px;
+}
+#compareTextArea #rightText::-webkit-scrollbar-thumb {
+    background-color: #2d3135;
+    border-radius: 12px;
+    min-height: 100px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+#compareTextArea #rightText::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+/* #endregion MainPage */
+
+/* #region sideBtn */
+#sideBtn ul #codeCheck {
+    background-color: #1C2530;
+    color: white;
+    border-bottom: 1.5px solid #EDEDED;
+}
+#sideBtn ul #codeCheck i {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+/* #endregion sideBtn */
+/* #endregion 코드체크 */

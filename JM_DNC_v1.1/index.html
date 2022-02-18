@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>JM_DNC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/43d74991db.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="getSerial()">
+    <div id="content">
+        <div id="menuBtn">
+            <span class="slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <img src="./menu.png" alt="menu">
+                </a>
+            </span>
+        </div>
+
+        <div id="menu" class="nav">
+            <a href="#" id="close" onclick="closeSlideMenu()">
+                <img src="./cancel.png" alt="">
+            </a>
+            <ul>
+                <li id="index"><a href="index.html" id="index_a" onclick="closeFunction()">시리얼 통신</a></li>
+                <li id="compare"><a href="compare.html" id="compare_a" onclick="closeFunction()">코드 체크</a></li>
+                <li id="3d"><a href="3d.html" id="3d_a" onclick="closeFunction()">3D 렌더링</a></li>
+                <li id="else"><a href="#" id="else_a" onclick="closeFunction()">기타</a></li>
+                <li id="setting"><a href="setting.html" id="setting_a" onclick="closeFunction()">설정</a></li>
+            </ul>
+        </div>
+
+        <div id="mainPage">
+            <div id="mainScreen">
+                <div id="path">c://Localpath/path/test/location</div>
+                <div id="textScreen">
+                    <textarea id="text"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="sideBtn">
+            <ul>
+                <button id="sendBtn">
+                    <img src="./send.png">
+                    <div>전송</div>
+                </button>
+                <button id="portBtn">
+                    <img src="./check.png" id="portStatusIcon">
+                    <div id="portStatus">포트 : OFF</div>
+                </button>
+                <button id="fileOpen">
+                    <img src="./file.png">
+                    <div>파일 열기</div>
+                </button>
+                <button id="fileSave">
+                    <img src="./download.png">
+                    <div>파일 저장</div>
+                </button>
+                <button id="delete">
+                    <img src="./delete.png">
+                    <div>삭제</div>
+                </button>
+            </ul>
+        </div>
+    </div>
+    
+    
+</body>
+
+<script src="./renderer.js"></script>
+
+</html>
